@@ -5,12 +5,14 @@
 package taller.prueba.PruebaTaller.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import taller.prueba.PruebaTaller.model.Marca;
 
 /**
  *
  * @author cg_sa
  */
+@Repository
 public interface MarcaRepository extends JpaRepository<Marca,Long>{
     
 }

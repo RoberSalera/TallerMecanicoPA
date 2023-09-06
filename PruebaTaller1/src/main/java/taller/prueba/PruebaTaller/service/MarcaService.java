@@ -17,27 +17,8 @@ import taller.prueba.PruebaTaller.repository.MarcaRepository;
  */
 
 @Service
-public class MarcaService {
-    @Autowired
-    private MarcaRepository marcaRepository;
-    
-    public Marca create (Marca marca){
-        return marcaRepository.save(marca);
-    }
-    
-    public List<Marca> getAllMarcas (){
-        return marcaRepository.findAll();
-    }
-    
-    
-    public void delete (Marca marca){
-        marcaRepository.delete(marca);
-    }
-    
-    
-    public Optional<Marca> findById (Long id ){
-        return marcaRepository.findById(id);
-    }
+public interface MarcaService {
+    public List<Marca> listarTodasLasMarcas();
     
   
 }

@@ -18,8 +18,9 @@ import jakarta.persistence.Table;
 @Table(name="marca")
 public class Marca {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    
     
     private String nombre;
 
@@ -39,8 +40,9 @@ public class Marca {
         this.nombre = nombre;
     }
 
-    public Marca(int id, String nombre) {
-        this.id = id;
+    public Marca(String nombre) {
+        super();
+
         this.nombre = nombre;
     }
     
